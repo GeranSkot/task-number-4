@@ -9,23 +9,20 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner p = new Scanner(System.in);
-        System.out.println("sentences, we need sentences");
-        String predl = p.nextLine();
+        System.out.println("Enter the sentence: ");
+        String pr = p.nextLine();
         int count = 0;
-
-        if(predl.length() != 0){
+        if(pr.length() != 0){
             count++;
-            for (int i = 0; i < predl.length(); i++) {
-                if(predl.charAt(i) == ' ' || predl.charAt(i) == ','){
+            for (int i = 0; i < pr.length(); i++) {
+                if(pr.charAt(i) == ' ' || pr.charAt(i) == ','){
                     count++;
                 }
             }
         }
-
-        char[] naisu = predl.toCharArray();
-        Arrays.sort(naisu);
-        String sorted = new String(naisu);
-
-        System.out.println("sentence: " + predl + ". count of words " + count + ". sorting " + sorted);
+        char[] na = pr.toCharArray();
+        Arrays.sort(na);
+        String sorted = new String(na);
+        System.out.println("sentence: " + pr + ". count of words " + count + ". sorting " + sorted);
     }
 }
